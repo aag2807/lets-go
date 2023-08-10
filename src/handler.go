@@ -32,8 +32,6 @@ func (h *Handler) HomeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Println("Template Parsing Success:", files)
-
 	err = template.ExecuteTemplate(w, "base", nil)
 	if err != nil {
 		log.Println("Template Execution Error:", err)

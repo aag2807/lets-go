@@ -1,0 +1,29 @@
+{{define "base"}}
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{template "title" .}} - SnippetBox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen min-w-screen flex flex-col">
+    <header class=" flex align-center justify-center p-5 min-w-screen border-slate-900">
+        <div class="flex flex-col align-center justify-center">
+            <img class="w-[60px] self-center" src="/static/img/coding.png" alt="">
+            <h1 class="text-2xl">
+                <a href="/">SnippetBox</a>
+            </h1>
+        </div>
+    </header>
+    {{template "navbar" .}}
+    <main class="px-10">
+        {{template "main" .}}
+    </main>
+    {{template "footer" .}}
+
+</body>
+
+</html>
+{{end}}
